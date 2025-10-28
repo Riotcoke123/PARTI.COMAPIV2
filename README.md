@@ -3,22 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parti API v2 Documentation</title>
-    <!-- Load Tailwind CSS from CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Use Inter font, similar to GitHub */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Minor style adjustments for the code blocks */
-        pre {
-            white-space: pre-wrap;       /* Wrap long lines */
-            word-wrap: break-word;     /* Break long words */
-        }
-    </style>
+
 </head>
+    <img src="https://github.com/user-attachments/assets/8aefdbc2-8e48-43e9-a549-6df85a4424ac" alt="PARTI.COM" width="250" height="250">
+
 <body class="bg-gray-100 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
     <!-- Main content container, styled like a GitHub README file view -->
     <div class="max-w-4xl mx-auto bg-white border border-gray-300 rounded-lg shadow-sm overflow-hidden">
