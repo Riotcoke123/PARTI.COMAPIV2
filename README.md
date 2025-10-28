@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Parti API v2 Documentation</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Use Inter font, similar to GitHub */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Minor style adjustments for the code blocks */
+        pre {
+            white-space: pre-wrap;       /* Wrap long lines */
+            word-wrap: break-word;     /* Break long words */
+        }
+    </style>
 </head>
 <body class="bg-gray-100 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
     <!-- Main content container, styled like a GitHub README file view -->
-    <div class="max-w-4xl mx-auto bg-white border border-gray-300 rounded-lg shadow-sm overflow-hidden">    
+    <div class="max-w-4xl mx-auto bg-white border border-gray-300 rounded-lg shadow-sm overflow-hidden">
         <!-- Header bar (optional, mimics the file header) -->
         <div class="bg-gray-50 px-5 py-3 border-b border-gray-200">
             <h1 class="text-xl font-semibold text-gray-800">Parti API v2 Documentation</h1>
@@ -142,7 +156,8 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the user.</li>
             </ul>
-                        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
+            <!-- API Endpoint 8: Get Creator Details (Stripe) -->
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 8. Get Creator Details (Stripe Integration)
             </h3>
             <p class="text-gray-600 mb-3">
@@ -162,7 +177,7 @@
                 Retrieves information on the prices of various platform assets or virtual goods.
             </p>
             <pre class="bg-gray-100 p-4 rounded-md overflow-x-auto">
-<code class="font-mono text-sm text-gray-800">/profile/assets_prices/info</code></pre>
+<code class="font-mono text-sm text-gray-800">/profile/assets_prices/info</code></pre> 
             <!-- API Endpoint 10: Featured Channels -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 10. Get Featured Channels
@@ -171,8 +186,7 @@
                 Lists the channels currently being promoted or featured on the platform.
             </p>
             <pre class="bg-gray-100 p-4 rounded-md overflow-x-auto">
-<code class="font-mono text-sm text-gray-800">/profile/featured_channels</code></pre>
-            <!-- API Endpoint 11: Live Channel Info (Paginated) -->
+<code class="font-mono text-sm text-gray-800">/profile/featured_channels</code></pre> <!-- API Endpoint 11: Live Channel Info (Paginated) -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 11. Get Live Channel Info (Paginated)
             </h3>
@@ -220,8 +234,8 @@
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 14. Get Specific Recent Livestream Channel Info by Event ID
             </h3>
-            <p class="text-600 mb-3">
-                Retrieves detailed information for a specific recent livestream using its unique event identifier.
+            <p class="text-gray-600 mb-3">
+                Retrieves detailed information for a specific recent livestream using its unique event identifier, following the <code>/recent</code> path.
             </p>
             <pre class="bg-gray-100 p-4 rounded-md overflow-x-auto">
 <code class="font-mono text-sm text-gray-800">/profile/get_livestream_channel_info/recent/{event_id}</code></pre>
