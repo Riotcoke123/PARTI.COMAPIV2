@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
 </head>
 <body class="bg-gray-100 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
     <!-- Main content container, styled like a GitHub README file view -->
-    <div class="max-w-4xl mx-auto bg-white border border-gray-300 rounded-lg shadow-sm overflow-hidden">
+    <div class="max-w-4xl mx-auto bg-white border border-gray-300 rounded-lg shadow-sm overflow-hidden">    
         <!-- Header bar (optional, mimics the file header) -->
         <div class="bg-gray-50 px-5 py-3 border-b border-gray-200">
             <h1 class="text-xl font-semibold text-gray-800">Parti API v2 Documentation</h1>
@@ -47,6 +47,7 @@
             <p class="text-gray-700 mb-6">
                 The following endpoints are available. We assume all endpoints use the <code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">GET</code> method unless otherwise specified.
             </p>
+            <!-- API Endpoint 1: User Profile -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 1. Get User Profile
             </h3>
@@ -59,6 +60,7 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the user.</li>
             </ul>
+            <!-- API Endpoint 2: Livestream Channel Info -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 2. Get Livestream Channel Info
             </h3>
@@ -71,6 +73,7 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the user/streamer.</li>
             </ul>
+            <!-- API Endpoint 3: User Profile Feed -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 3. Get User Profile Feed
             </h3>
@@ -87,6 +90,7 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">limit</code> (integer): The number of items to return (e.g., 5).</li>
             </ul>
+            <!-- API Endpoint 4: Livestream Moderators -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 4. Get Livestream Moderators
             </h3>
@@ -99,6 +103,7 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the streamer.</li>
             </ul>
+            <!-- API Endpoint 5: Livestream Banner -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 5. Get Livestream Banner
             </h3>
@@ -111,6 +116,7 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the streamer.</li>
             </ul>
+            <!-- API Endpoint 6: User Currency Info -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 6. Get User Currency Info
             </h3>
@@ -123,6 +129,7 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the user.</li>
             </ul>
+            <!-- API Endpoint 7: Pinned Message -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 7. Get Pinned Message
             </h3>
@@ -135,7 +142,7 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the user.</li>
             </ul>
-            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
+                        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 8. Get Creator Details (Stripe Integration)
             </h3>
             <p class="text-gray-600 mb-3">
@@ -147,6 +154,7 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the creator/user.</li>
             </ul>
+            <!-- API Endpoint 9: Assets Prices Info -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 9. Get Assets Prices Info
             </h3>
@@ -155,8 +163,8 @@
             </p>
             <pre class="bg-gray-100 p-4 rounded-md overflow-x-auto">
 <code class="font-mono text-sm text-gray-800">/profile/assets_prices/info</code></pre>
-            
-<h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
+            <!-- API Endpoint 10: Featured Channels -->
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 10. Get Featured Channels
             </h3>
             <p class="text-gray-600 mb-3">
@@ -164,6 +172,7 @@
             </p>
             <pre class="bg-gray-100 p-4 rounded-md overflow-x-auto">
 <code class="font-mono text-sm text-gray-800">/profile/featured_channels</code></pre>
+            <!-- API Endpoint 11: Live Channel Info (Paginated) -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 11. Get Live Channel Info (Paginated)
             </h3>
@@ -177,6 +186,7 @@
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">limit</code> (integer): The maximum number of channels to return (e.g., 30 or 100).</li>
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">offset</code> (integer): The starting index for the list (e.g., 0).</li>
             </ul>
+            <!-- API Endpoint 12: Livestream Calendar Events (Paginated) -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 12. Get Livestream Calendar Events
             </h3>
@@ -190,12 +200,42 @@
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">limit</code> (integer): The maximum number of events to return (e.g., 100).</li>
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">offset</code> (integer): The starting index for the list (e.g., 0).</li>
             </ul>
+            <!-- API Endpoint 13: Recent Livestream Channel Info (Paginated/Filtered) -->
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
+                13. Get Recent Livestream Channel Info (Paginated/Filtered)
+            </h3>
+            <p class="text-gray-600 mb-3">
+                Fetches a paginated list of recent livestream channels, with options for sorting and filtering by a specific user ID.
+            </p>
+            <pre class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+<code class="font-mono text-sm text-gray-800">/profile/get_livestream_channel_info/recent</code></pre>
+            <h4 class="font-semibold text-gray-700 mt-3 mb-1">Query Parameters:</h4>
+            <ul class="list-disc list-inside text-gray-700">
+                <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">sort_by_date_desc</code> (boolean/string): Determines if results should be sorted by date in descending order (e.g., <code>true</code>).</li>
+                <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">by_user_id</code> (string): Filters the results to only include channels associated with this user ID (e.g., <code>649745</code>).</li>
+                <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">limit</code> (integer): The maximum number of channels to return (e.g., 10).</li>
+                <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">offset</code> (integer): The starting index for the list (e.g., 1).</li>
+            </ul>
+            <!-- NEW API Endpoint 14: Specific Recent Livestream Channel Info by Event ID -->
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
+                14. Get Specific Recent Livestream Channel Info by Event ID
+            </h3>
+            <p class="text-600 mb-3">
+                Retrieves detailed information for a specific recent livestream using its unique event identifier.
+            </p>
+            <pre class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+<code class="font-mono text-sm text-gray-800">/profile/get_livestream_channel_info/recent/{event_id}</code></pre>
+            <h4 class="font-semibold text-gray-700 mt-3 mb-1">URL Parameters:</h4>
+            <ul class="list-disc list-inside text-gray-700">
+                <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{event_id}</code> (string): The unique identifier for the specific livestream event.</li>
+            </ul>
             <h2 class="text-2xl font-semibold text-gray-900 border-b border-gray-200 pb-2 mt-8 mb-4">
                 Example Asset URLs
             </h2>
             <p class="text-gray-700 mb-6">
                 This section contains examples of URLs for assets or streams that may be referenced by the API.
             </p>
+            <!-- Example URL 1: HLS Stream (Segmented) -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 1. Segmented HLS Stream URL Template
             </h3>
@@ -227,4 +267,3 @@
 
 </body>
 </html>
-
