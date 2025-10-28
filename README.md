@@ -20,7 +20,7 @@
                 Parti API v2
             </h1>
             <p class="text-gray-700 leading-relaxed mb-6">
-                Welcome to the official documentation for the Parti API v2. This API provides access to user profiles, livestream information, and related content.
+                Welcome to the unofficial documentation for the Parti API v2. This API provides access to user profiles, livestream information, and related content.
             </p>
             <h2 class="text-2xl font-semibold text-gray-900 border-b border-gray-200 pb-2 mt-8 mb-4">
                 Getting Started & Authentication
