@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parti API v2 Documentation</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Use Inter font, similar to GitHub */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Minor style adjustments for the code blocks */
+        pre {
+            white-space: pre-wrap;       /* Wrap long lines */
+            word-wrap: break-word;     /* Break long words */
+        }
+    </style>
+</head>
 <body class="bg-gray-100 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
     <!-- Main content container, styled like a GitHub README file view -->
     <div class="max-w-4xl mx-auto bg-white border border-gray-300 rounded-lg shadow-sm overflow-hidden">
@@ -9,6 +26,7 @@
         <div class="bg-gray-50 px-5 py-3 border-b border-gray-200">
             <h1 class="text-xl font-semibold text-gray-800">Parti API v2 Documentation</h1>
         </div>
+        <!-- README content area -->
         <div class="p-6 md:p-8">
             <h1 class="text-3xl font-bold text-gray-900 border-b border-gray-200 pb-3 mb-6">
                 Parti API v2
@@ -16,6 +34,21 @@
             <p class="text-gray-700 leading-relaxed mb-6">
                 Welcome to the official documentation for the Parti API v2. This API provides access to user profiles, livestream information, and related content.
             </p>
+            <h2 class="text-2xl font-semibold text-gray-900 border-b border-gray-200 pb-2 mt-8 mb-4">
+                Getting Started & Authentication
+            </h2>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
+                Finding the Streamer User ID
+            </h3>
+            <p class="text-gray-600 mb-3">
+                Most API endpoints require a <code>{user_id}</code> parameter. For a streamer on parti.com, this ID can often be found by:
+            </p>
+            <ol class="list-decimal list-inside text-gray-700 ml-4 mb-6 space-y-2">
+                <li>Opening your browser's Developer Tools (F12 or Cmd+Option+I).</li>
+                <li>Navigating to the <strong>Network</strong> tab.</li>
+                <li>Filtering network requests for keywords like <code>parti_v2</code> or <code>user_profile</code> while viewing the streamer's page.</li>
+                <li>The <code>user_id</code> is typically a long numeric string found within the request or response payloads.</li>
+            </ol>
             <h2 class="text-2xl font-semibold text-gray-900 border-b border-gray-200 pb-2 mt-8 mb-4">
                 Base URL
             </h2>
@@ -110,7 +143,6 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the user.</li>
             </ul>
-
             <!-- API Endpoint 7: Pinned Message -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 7. Get Pinned Message
@@ -124,14 +156,25 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the user.</li>
             </ul>
+            <!-- API Endpoint 8: Get Creator Details (Stripe) -->
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
+                8. Get Creator Details (Stripe Integration)
+            </h3>
+            <p class="text-gray-600 mb-3">
+                Retrieves integration details for a creator, likely related to payment processing (Stripe).
+            </p>
+            <pre class="bg-gray-100 p-4 rounded-md overflow-x-auto">
+<code class="font-mono text-sm text-gray-800">/stripe/get_creator_details/{user_id}</code></pre>
+            <h4 class="font-semibold text-gray-700 mt-3 mb-1">URL Parameters:</h4>
+            <ul class="list-disc list-inside text-gray-700">
+                <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the creator/user.</li>
+            </ul>
             <h2 class="text-2xl font-semibold text-gray-900 border-b border-gray-200 pb-2 mt-8 mb-4">
                 Example Asset URLs
             </h2>
-
             <p class="text-gray-700 mb-6">
                 This section contains examples of URLs for assets or streams that may be referenced by the API.
             </p>
-
             <!-- Example URL 1: HLS Stream (Segmented) -->
             <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">
                 1. Segmented HLS Stream URL Template
@@ -159,7 +202,6 @@
             <ul class="list-disc list-inside text-gray-700">
                 <li><code class="bg-gray-200 rounded px-1.5 py-0.5 font-mono text-sm">{user_id}</code> (string): The unique identifier for the streamer.</li>
             </ul>
-
         </div>
     </div>
 
