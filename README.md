@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Tailwind CSS CDN -->
+
 </head>
 
 <body class="bg-gray-100 min-h-screen py-10 px-4 sm:px-6 lg:px-8">
@@ -12,8 +12,8 @@
       <img
         src="https://github.com/user-attachments/assets/8aefdbc2-8e48-43e9-a549-6df85a4424ac"
         alt="PARTI.COM"
-        width="60"
-        height="60"
+        width="160"
+        height="160"
         class="rounded"
       />
       <h1 class="text-xl font-semibold text-gray-800">Parti API v2 Documentation</h1>
